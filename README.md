@@ -1,24 +1,33 @@
-# README
+#Userテーブル
+string :name
+string :email
+string :password_digest
+#Taskテーブル
+strig :title
+content :text
+deadline :date
+status :integer
+priority :integer
+#Labelテーブル
+name :string
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#デプロイ方法
 
-Things you may want to cover:
+Ruby on Rails 5.2.4.4
+#herokuにログイン
+$ heroku login
 
-* Ruby version
+新しいレポジトリを作成
+$ heroku create
 
-* System dependencies
+#Herokuにデプロイ
 
-* Configuration
+$ git push heroku master
 
-* Database creation
+#データベースの移行
 
-* Database initialization
+$ heroku run rails db:migrate
 
-* How to run the test suite
+#アプリケーションにアクセスを行う
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+createした際のURL
