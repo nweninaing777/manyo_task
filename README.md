@@ -1,15 +1,23 @@
-#Userテーブル
-string :name
-string :email
-string :password_digest
-#Taskテーブル
-strig :title
-content :text
-deadline :date
-status :integer
-priority :integer
-#Labelテーブル
-name :string
+##User_Table
+
+|  カラム  |  データ型 |
+| ---- | ---- |
+| string | name |
+| string | email |
+| string | password_digest |
+
+##Task_Table
+
+|  カラム  |  データ型 |
+| ---- | ---- |
+| string | title |
+| content | text |
+
+#Label_Table
+
+|  カラム  |  データ型 |
+| ---- | ---- |
+| name | string |
 
 #デプロイ方法
 
