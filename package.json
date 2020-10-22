@@ -1,5 +1,7 @@
 {
   "name": "manyoTask",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "3"
+  }
 }
