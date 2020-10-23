@@ -73,7 +73,7 @@ RSpec.describe 'タスク管理機能', type: :system do
         visit new_task_path
         fill_in 'タスク名', with: '万葉課題'
         fill_in 'タスク詳細', with: '万葉課題の提出'
-        fill_in '終了期限', with: '2020/05/23'
+        fill_in '終了期限', with: '2020/10/23'
         select '完了', from: "task_status"
         select '高', from: "task_priority"
         click_on "登録する"
@@ -89,6 +89,7 @@ RSpec.describe 'タスク管理機能', type: :system do
          visit task_path(task_id)
          expect(page).to have_content 'dive_text'
          expect(page).to have_content 'submit task'
+
        end
      end
   end
