@@ -1,8 +1,7 @@
 class TasksController < ApplicationController
 before_action :set_task, only: [:show, :edit, :update, :destroy]
-
-
-  def index
+before_action :require_login
+def index
     if params[:sort_expired]
       @tasks = Task.all.order(deadline: :desc).page(params[:page]).per(10)
     elsif params[:sort_priority]
