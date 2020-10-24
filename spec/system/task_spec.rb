@@ -73,7 +73,7 @@ RSpec.describe 'タスク管理機能', type: :system do
         visit new_task_path
         fill_in 'タスク名', with: '万葉課題'
         fill_in 'タスク詳細', with: '万葉課題の提出'
-        fill_in '終了期限', with: '2020/10/23'
+        fill_in '終了期限', with: '2020/05/23'
         select '完了', from: "task_status"
         select '高', from: "task_priority"
         click_on "登録する"
@@ -87,9 +87,7 @@ RSpec.describe 'タスク管理機能', type: :system do
        it '該当タスクの内容が表示されたページに遷移する' do
          task_id = FactoryBot.create(:task, title: 'dive_text', content: 'submit task', deadline: '2020-10-23')
          visit task_path(task_id)
-         expect(page).to have_content 'dive_text'
-         expect(page).to have_content 'submit task'
-
+         expect(page).to have_content 'dive_text', 'submit task'
        end
      end
   end

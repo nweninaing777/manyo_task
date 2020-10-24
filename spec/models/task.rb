@@ -13,15 +13,15 @@ RSpec.describe 'タスク管理機能', type: :model do
     expect(task).not_to be_valid
   end
   it 'statusが空ならバリデーションが通らない' do
-    task = Task.new(title: '万葉', content: '万葉課題', deadline: '2020-05-27', status: '')
+    task = Task.new(title: '万葉', content: '万葉課題', deadline: '2020-10-27', status: '')
     expect(task).not_to be_valid
   end
   it 'priorityが空ならバリデーションが通らない' do
-    task = Task.new(title: '万葉', content: '万葉課題', deadline: '2020-05-27', status: '完了', priority: '')
+    task = Task.new(title: '万葉', content: '万葉課題', deadline: '2020-10-27', status: '完了', priority: '')
     expect(task).not_to be_valid
   end
   it '内容が記載されていればバリデーションが通る' do
-    task = Task.new(title: '万葉', content: '万葉課題', deadline: '2020-05-27', status: '完了', priority: '高')
+    task = Task.new(title: '万葉', content: '万葉課題', deadline: '2020-10-27', status: '完了', priority: '高')
     expect(task).to be_valid
   end
 end
