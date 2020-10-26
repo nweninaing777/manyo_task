@@ -22,8 +22,7 @@ RSpec.describe 'タスク管理機能', type: :system do
         expect(task_list[1]).to have_content 'task'
       end
     end
-
-    context '終了期限（期日)でソートした場合' do
+   context '終了期限（期日)でソートした場合' do
       it 'タスクが終了期限の降順に並んでいること' do
         visit tasks_path
         click_on '終了期限でソートする'
