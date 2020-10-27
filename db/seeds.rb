@@ -18,8 +18,15 @@
                admin: admin,
               )
 end
-User.create!(name:  "adminhero",
+        User.create!(name:  "adminhero",
              email: "adminhero@gmail.com",
-             password:  "111111",
-             password_confirmation: "111111",
+             password:  "11111111",
+             password_confirmation: "11111111",
              admin: true)
+
+             User.create!(name:  "nweninaing",
+                          email: "nweninaing@gmail.com",
+                          password:  "2222222222",
+                          password_confirmation: "2222222222",
+                          admin: true
+                         )
