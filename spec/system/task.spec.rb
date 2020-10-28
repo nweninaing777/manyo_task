@@ -2,8 +2,8 @@ require 'rails_helper'
 RSpec.describe 'タスク管理機能', type: :system do
 
   before do
-    @task = FactoryBot.create(:task, title: 'task', content: 'submit task', deadline: '2020-10-23', status: '完了', priority: '高')
-    @second_task = FactoryBot.create(:task, title: 'new_task',content: 'difficult task', deadline: '2020-10-24', status: '着手中',priority: '中')
+    @task = FactoryBot.create(:task, title: 'task', content: 'submit task', deadline: '2020-12-23', status: '完了', priority: '高')
+    @second_task = FactoryBot.create(:task, title: 'new_task',content: 'difficult task', deadline: '2020-12-24', status: '着手中',priority: '中')
   end
 
   describe 'タスク一覧画面' do
@@ -27,8 +27,8 @@ RSpec.describe 'タスク管理機能', type: :system do
         visit tasks_path
         click_on '終了期限でソートする'
         task_list = all('.task_deadline')
-        expect(task_list[0]).to have_content '2020年10月24日'
-        expect(task_list[1]).to have_content '2020年10月23日'
+        expect(task_list[0]).to have_content '2020年12月24日'
+        expect(task_list[1]).to have_content '2020年12月23日'
       end
     end
 
@@ -72,7 +72,11 @@ RSpec.describe 'タスク管理機能', type: :system do
         visit new_task_path
         fill_in 'タスク名', with: '万葉課題'
         fill_in 'タスク詳細', with: '万葉課題の提出'
+<<<<<<< HEAD:spec/system/task_spec.rb
         fill_in '終了期限', with: '2020/10/23'
+=======
+        fill_in '終了期限', with: '2020/12/23'
+>>>>>>> 3bbcd2869510d89227b1ebea83385ca5010afaae:spec/system/task.spec.rb
         select '完了', from: "task_status"
         select '高', from: "task_priority"
         click_on "登録する"
@@ -84,7 +88,7 @@ RSpec.describe 'タスク管理機能', type: :system do
   describe 'タスク詳細画面' do
      context '任意のタスク詳細画面に遷移した場合' do
        it '該当タスクの内容が表示されたページに遷移する' do
-         task_id = FactoryBot.create(:task, title: 'dive_text', content: 'submit task', deadline: '2020-10-23')
+         task_id = FactoryBot.create(:task, title: 'dive_text', content: 'submit task', deadline: '2020-12-23')
          visit task_path(task_id)
          expect(page).to have_content 'dive_text'
          expect(page).to have_content 'submit task'
