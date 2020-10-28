@@ -15,6 +15,7 @@
                  password: password,
                  password_confirmation: password,
                  )
+
   end
 
   User.create!(name:  "adminhero",
