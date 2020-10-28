@@ -1,12 +1,8 @@
 class TasksController < ApplicationController
 before_action :set_task, only: [:show, :edit, :update, :destroy]
 before_action :require_login
-<<<<<<< HEAD
-def index
-=======
 
   def index
->>>>>>> 3bbcd2869510d89227b1ebea83385ca5010afaae
     if params[:sort_expired]
       @tasks = current_user.tasks.order(deadline: :desc).page(params[:page]).per(10)
     elsif params[:sort_priority]
@@ -23,6 +19,10 @@ def index
       elsif params[:status].present?
         @tasks = Task.status_search(params[:status]).page(params[:page]).per(10)
       end
+    end
+
+    if params[:label_id].present?
+      @tasks = @tasks.joins(:labels).where(labels: { id: params[:label_id] })
     end
   end
 
@@ -63,7 +63,7 @@ def index
 
   private
   def task_params
-    params.require(:task).permit(:title, :content, :deadline, :status, :priority)
+    params.require(:task).permit(:title, :content, :deadline, :status, :priority, label_ids: [])
   end
 
   def set_task

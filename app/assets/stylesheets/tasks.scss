@@ -25,3 +25,17 @@
   background-color: skyblue;
 
 }
+.btn-sticky {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #F4D03F;
+  border-left: solid 6px #0A6D0D;/*左線*/
+  color: #0A6D0A ;/*文字色*/
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+}
+.btn-sticky:active {
+  box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+  transform: translateY(2px);
+}

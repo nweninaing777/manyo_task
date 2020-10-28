@@ -22,7 +22,8 @@ RSpec.describe 'タスク管理機能', type: :system do
         expect(task_list[1]).to have_content 'task'
       end
     end
-   context '終了期限（期日)でソートした場合' do
+
+    context '終了期限（期日)でソートした場合' do
       it 'タスクが終了期限の降順に並んでいること' do
         visit tasks_path
         click_on '終了期限でソートする'
@@ -72,11 +73,7 @@ RSpec.describe 'タスク管理機能', type: :system do
         visit new_task_path
         fill_in 'タスク名', with: '万葉課題'
         fill_in 'タスク詳細', with: '万葉課題の提出'
-<<<<<<< HEAD:spec/system/task_spec.rb
-        fill_in '終了期限', with: '2020/10/23'
-=======
         fill_in '終了期限', with: '2020/12/23'
->>>>>>> 3bbcd2869510d89227b1ebea83385ca5010afaae:spec/system/task.spec.rb
         select '完了', from: "task_status"
         select '高', from: "task_priority"
         click_on "登録する"

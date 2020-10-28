@@ -4,28 +4,10 @@
     <title>ManyoTask</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-<<<<<<< HEAD
-  <body>
-      <br>
-      <div class="log_tags">
-        <% flash.each do |key, value| %>
-          <%= content_tag(:div, value, class: "#{key}") %>
-        <% end %>
-        <% if logged_in? %>
-            <button type="button" class="btn1"> <%= link_to "Profile", user_path(current_user.id) %></button>
-          <button type="button" class="btn1"><%= link_to "Logout", session_path(current_user.id), method: :delete %></button>
-        <% else %>
-          <button type="button" class="btn1">   <%= link_to "Sign up", new_user_path %></button>
-            <button type="button" class="btn1"> <%= link_to "Login", new_session_path %></button>
-        <% end %>
-      </div>
-      <%= yield %>
-    </body>
-  </html>
-=======
 
     <body>
         <br>
@@ -48,4 +30,3 @@
         <%= yield %>
       </body>
     </html>
->>>>>>> 3bbcd2869510d89227b1ebea83385ca5010afaae

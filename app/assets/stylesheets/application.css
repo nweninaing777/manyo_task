@@ -14,10 +14,7 @@
  *= require_tree .
  *= require_self
  */
-<<<<<<< HEAD
-=======
 
->>>>>>> 3bbcd2869510d89227b1ebea83385ca5010afaae
  .log_tags {
    text-align: center;
  }

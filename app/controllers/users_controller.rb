@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
-<<<<<<< HEAD
-def new
-=======
 
     def new
->>>>>>> 3bbcd2869510d89227b1ebea83385ca5010afaae
       unless session[:user_id] == nil
         redirect_to user_path(session[:user_id]), notice: 'すでにユーザーが作成されています'
       else

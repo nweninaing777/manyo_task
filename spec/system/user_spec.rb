@@ -123,12 +123,7 @@ RSpec.describe 'ユーザ登録・ログイン・ログアウト機能', type: :
         @user = FactoryBot.create(:user)
         visit admin_users_path
         click_on "削除", match: :first
-<<<<<<< HEAD
-        page.driver.browser.switch_to.alert.accept
-        expect(page).to have_content "ユーザー「sample」を削除しました"
-=======
       
->>>>>>> 3bbcd2869510d89227b1ebea83385ca5010afaae
       end
     end
   end

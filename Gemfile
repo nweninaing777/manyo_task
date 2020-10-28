@@ -16,10 +16,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'kaminari'
 gem 'bcrypt', '3.1.12'
 gem 'faker'
-<<<<<<< HEAD
-=======
 
->>>>>>> 3bbcd2869510d89227b1ebea83385ca5010afaae
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
@@ -27,7 +24,6 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails'
-
 end
 
 group :development do
