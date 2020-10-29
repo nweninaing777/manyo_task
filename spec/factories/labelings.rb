@@ -1,7 +1,5 @@
-
 FactoryBot.define do
- factory :labeling do
-   task { 'Factoryで作ったデフォルトのタイトル1' }
-   label { '開発' }
- end
+  factory :labeling do
+    
+  end
 end

@@ -25,7 +25,7 @@
 
              Label.create([
                        { name: "Self study" },
-                       { name: "Class" },
+                       { name: "Test" },
                        { name: "Question" },
-                       { name: "on hold" },
+                       { name: "develop" },
                        ])
