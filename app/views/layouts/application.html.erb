@@ -18,6 +18,7 @@
           <% if logged_in? %>
             <%= link_to "Profile", user_path(current_user.id) %>
             <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+           <button type="button" class="btn1"> <%= link_to 'Label list', labels_path %></button>
           <% if current_user.admin? %>
          <button type="button" class="btn1"><%= link_to "Go to admin users list", admin_users_path %></button>
         <button type="button" class="btn1">  <%= link_to "Create admin user", new_admin_user_path %></button>
