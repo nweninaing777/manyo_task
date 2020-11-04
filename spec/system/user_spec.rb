@@ -123,7 +123,7 @@ RSpec.describe 'ユーザ登録・ログイン・ログアウト機能', type: :
         @user = FactoryBot.create(:user)
         visit admin_users_path
         click_on "削除", match: :first
-      
+        
       end
     end
   end
